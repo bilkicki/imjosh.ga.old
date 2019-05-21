@@ -1,0 +1,192 @@
+/*
+Theme Name: Portfolio
+Theme URI: 
+Author: Bilkicki
+Author URI: https://www.imjosh.ga/
+Description: New
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 18px;
+  color: #00ff00;
+  font-family: "Aldrich", sans-serif;
+  text-align: center;
+}
+nav {
+  z-index: 1;
+  position: fixed;
+  right: 0;
+}
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  height: 51px;
+  list-style: none;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+  li {
+    width: 33vw;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: height 500ms, color 500ms;
+    transition: height 500ms, color 500ms;
+    @media (min-width: 768px) {
+      width: 15vw;
+    }
+    &:hover {
+      height: 100%;
+      color: #fff;
+    }
+  }
+  a {
+    display: block;
+    padding: 15px 0;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+#welcome-section,
+#projects,
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: #222629;
+}
+h1,
+h2 {
+  color: #fff;
+}
+#projects {
+  background-color: #004285;
+  padding: 50px 0 20px;
+}
+.project-links,
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.project-links a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.project-links a,
+.socials a {
+  position: relative;
+  margin-top: 20px;
+}
+.project-links img {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+.desc {
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 100%;
+  height: 0px;
+  background-color: #222629;
+  font-size: 0.9em;
+  border: 1px solid;
+  border-radius: 0 0 20px 20px;
+  -webkit-transition: height 500ms;
+  transition: height 500ms;
+}
+a:hover .desc {
+  z-index: 1;
+  height: 50px;
+}
+#contact {
+  margin-bottom: -16px;
+  background-color: #57289A;
+}
+.fa,
+.hidden {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 120px;
+  color: #fff;
+  line-height: 100px;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: transform 1s;
+  transition: transform 1s;
+}
+.fa-twitter {
+  color: #00aced;
+  font-size: 90px;
+}
+.fa-facebook-official {
+  background-color: #3b5998;
+}
+.fa-github {
+  background-color: #000;
+}
+.fa-envelope {
+  font-size: 75px;
+  color: #000;
+  line-height: 95px;
+}
+.hidden {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: inherit;
+  color: inherit;
+  background-color: #222629;
+  border: 1px solid;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.socials a:hover {
+  .fa {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .hidden {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+footer {
+  position: relative;
+  bottom: 0px;
+  right: 10px;
+  font-size: 0.7em;
+  text-align: right;
+  a:hover {
+    opacity: 0.7;
+  }
+}
